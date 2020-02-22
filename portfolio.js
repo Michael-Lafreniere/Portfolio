@@ -1,6 +1,13 @@
+const toggleTheme = event => {
+  if (document.documentElement.hasAttribute('theme')) {
+    document.documentElement.removeAttribute('theme');
+  } else {
+    document.documentElement.setAttribute('theme', 'dark');
+  }
+};
+
 const moreInfo = event => {
   event.preventDefault();
-  // console.log('more info clicked:', event);
   if (
     event.target.parentNode.parentNode.parentNode.parentNode.lastElementChild.classList.value.includes(
       'hidden'

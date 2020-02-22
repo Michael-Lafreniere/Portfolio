@@ -14,6 +14,19 @@
   --left-side-width: 34%;
 }
 
+:root[theme='dark'] {
+  --social-color: #cbe3ff;
+  --social-alt-color: #df0f00;
+  --link-color: var(--social-alt-color);
+  --transition-red: #d10e01;
+  --white-color: #fcfcfc;
+  --text-color: var(--white-color);
+  --name-color: #e8f0fa;
+  --title-color: var(--name-color);
+  --bkgrnd-color: #10243d;
+  --mid-grey-color: #555;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   padding: 0px;
