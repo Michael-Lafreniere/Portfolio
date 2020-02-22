@@ -1,0 +1,143 @@
+:root {
+  /* Colors: */
+  --enable-color: #0f0;
+  --disabled-color: #f00;
+  --toggle-border-color: #333;
+  --toggle-background: #101010;
+  --indicator-background: var(--toggle-background);
+  --button-center-band: #333;
+  --button-side-band: #252525;
+  --button-border: #292929;
+
+  /* Edit these values to your requirements: */
+  --toogle-width: 50px;
+  --transition-time: 0.15s;
+
+  /* You shouldn't need to adjust the following values, they're based on the width of the toggle. */
+  --toggle-height: calc(var(--toogle-width) / 4);
+  --border-thickness: calc(var(--toogle-width) / 60);
+
+  --indicator-height: calc(var(--border-thickness) * 2.5);
+  --indicator-offset: calc((var(--toogle-width) / 6) * -1);
+  --indicator-center: calc(50% - (var(--indicator-height) / 2));
+
+  --button-width: calc(var(--toogle-width) / 2);
+  --button-band-width: calc(var(--button-width) / 1.85);
+}
+
+.toggle-class {
+  position: relative;
+  width: var(--toogle-width);
+  height: var(--toggle-height);
+  cursor: pointer;
+  margin: calc(var(--toggle-height) / 4) 0;
+}
+
+.toggle-class input {
+  opacity: 0;
+}
+
+.toggle-class .toggle-check {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  background: var(--toggle-background);
+  border-radius: calc(var(--toogle-width) / 6);
+  box-shadow: 0 0 0 var(--border-thickness) var(--toggle-border-color);
+}
+
+/* Disabled indicator (left side): */
+.toggle-class .toggle-check:before {
+  content: '';
+  position: absolute;
+  top: var(--indicator-center);
+  left: var(--indicator-offset);
+  width: var(--indicator-height);
+  height: var(--indicator-height);
+  border-radius: 50%;
+  background: var(--disabled-color);
+  transition: var(--transition-time);
+  box-shadow: 0 0 5px var(--disabled-color),
+    0 0 calc(var(--toggle-height) / 8) var(--disabled-color),
+    0 0 calc(var(--toggle-height) / 4) var(--disabled-color),
+    0 0 calc(var(--toggle-height) / 2) var(--disabled-color),
+    0 0 var(--toggle-height) var(--disabled-color);
+}
+
+.toggle-class input:checked ~ .toggle-check:before {
+  background: var(--indicator-background);
+  box-shadow: none;
+}
+
+/* Enabled indicator (right side) */
+.toggle-class .toggle-check:after {
+  content: '';
+  position: absolute;
+  top: var(--indicator-center);
+  right: var(--indicator-offset);
+  width: var(--indicator-height);
+  height: var(--indicator-height);
+  border-radius: 50%;
+  background: var(--indicator-background);
+  transition: var(--transition-time);
+  box-shadow: none;
+}
+
+.toggle-class input:checked ~ .toggle-check:after {
+  background: var(--enable-color);
+  box-shadow: 0 0 5px var(--enable-color),
+    0 0 calc(var(--toggle-height) / 8) var(--enable-color),
+    0 0 calc(var(--toggle-height) / 2) var(--enable-color),
+    0 0 calc(var(--toggle-height) / 4) var(--enable-color),
+    0 0 var(--toggle-height) var(--enable-color);
+}
+
+/* Toggle button: */
+.toggle-class .toggle-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: var(--button-width);
+  height: var(--toggle-height);
+  border-radius: calc(var(--toggle-height) / 2);
+  background: var(--button-center-band);
+  transition: var(--transition-time);
+  box-shadow: inset 0 -20px 15px var(--button-transition),
+    inset 0 20px 15px var(--button-border);
+}
+
+.toggle-class .toggle-button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(var(--button-width) - var(--button-band-width));
+  height: var(--toggle-height);
+  background: var(--button-side-band);
+  border-top-left-radius: var(--toggle-height);
+  border-bottom-left-radius: var(--toggle-height);
+  box-shadow: inset -5px -5px 15px rgba(0, 0, 0, 0.3);
+  filter: blur(2px);
+}
+
+.toggle-class .toggle-button:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(var(--button-width) - var(--button-band-width));
+  height: var(--toggle-height);
+  background: var(--button-side-band);
+  border-top-right-radius: var(--toggle-height);
+  border-bottom-right-radius: var(--toggle-height);
+  box-shadow: inset -5px -5px 15px rgba(0, 0, 0, 0.3);
+  filter: blur(2px);
+}
+
+.toggle-class input:checked ~ .toggle-button {
+  left: 50%;
+}
