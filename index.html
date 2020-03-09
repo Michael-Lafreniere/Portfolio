@@ -2,294 +2,55 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"
+    ></script>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
       integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
       crossorigin="anonymous"
     />
-    <link href="index.css" rel="stylesheet" />
-    <link rel="stylesheet" href="toggle.css">
-    <title>Michael Lafreniere Portfolio Site</title>
+    <link href="main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="toggle.css" />
+    <title>Michael Lafreniere's Portfolio</title>
   </head>
   <body>
-    <header class="site-header relative">
-      <div class="intro">
-        <div class="greeting">I'm</div>
-        <div id="my-name">Michael Lafreniere</div>
-        <div class="greeting greeting-3em-offset">welcome to my portfolio</div>
-      </div>
+    <header>
       <div class="navigation">
-        <a class="link link--red link__on-hover" href="#">Work</a>
-        <a class="link link--red link__on-hover" href="#">About</a>
-        <a class="link link--red link__on-hover" href="#">Contact</a>
-        <label class="toggle-class">
-          <input type="checkbox" name="" onclick="toggleTheme(event)"/>
-          <span class="toggle-check"></span>
-          <span class="toggle-button"></span>
-        </label>
+        <nav>
+          <div class="menu-icons open">
+            <ion-icon name="menu-outline"></ion-icon>
+          </div>
+          <div class="menu-icons close">
+            <ion-icon name="close-circle-outline"></ion-icon>
+          </div>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a class="link link--red link__on-hover" href="#">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="link link--red link__on-hover" href="#">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="link link--red link__on-hover" href="#">Challenges</a>
+            </li>
+            <li class="nav-item">
+              <a class="link link--red link__on-hover" href="#">Writings</a>
+            </li>
+            <li class="nav-item">
+              <a class="link link--red link__on-hover" href="#">Contact</a>
+            </li>
+          </ul>
+          <!-- <label class="toggle-class">
+            <input type="checkbox" name="" onclick="toggleTheme(event)" />
+            <span class="toggle-check"></span>
+            <span class="toggle-button"></span>
+          </label> -->
+        </nav>
       </div>
     </header>
-
-    <main>
-      <section>
-        <div class="quick-about">
-          <div class="intro-text">
-            I'm a full stack web developer and C/C++ Programmer living in the
-            beautiful Pacific Northwest of the USA. I have a thirst for knowledge and to learn
-            new things.  I also truly believe anything can be overcome with hard work
-            and committment.
-          </div>
-          <div class="social-media">
-            <table>
-              <tr>
-                <td>
-                  <a href="https://twitter.com/CrazyMadCoder" class="social social--padding"
-                    ><i
-                      class="fab fa-twitter faa-social animated-hover"
-                      aria-hidden="true"
-                    ></i
-                  ></a>
-                </td>
-                <td>
-                  <a href="#" class="social social--padding"
-                    ><i
-                      class="fab fa-linkedin faa-social animated-hover"
-                      aria-hidden="true"
-                    ></i
-                  ></a>
-                </td>
-                <td>
-                  <a href="#" class="social social--padding"
-                    ><i
-                      class="fab fa-medium faa-social animated-hover"
-                      aria-hidden="true"
-                    ></i
-                  ></a>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <div class="container">
-        <div class="left">
-          <section>
-            <div class="about">
-              <div class="title">About Me</div>
-              <div class="about-text">
-                I started programming back in the mid-90s on my 386 computer, taking
-                after my grandfather who progammed computers in Germany, then later in
-                Canada. I started off learning QBasic, then went to Turbo Pascal
-                before moving on to C and then C++.
-              </div>
-              <br />
-              <div class="about-text">
-                I have now made the transition into full stack web development and have
-                become familiar with:
-              </div>
-              <br>
-              <ul>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <ul>
-                  <li>BEM formatting</li>
-                  <li>SASS/SCSS</li>
-                </ul>
-                <li>Javascript</li>
-                <li>ReactJS 16.8</li>
-                <ul>
-                  <li>Including Hooks</li>
-                </ul>
-                <li>Redux</li>
-                <li>NodeJS</li>
-                <ul>
-                  <li>EJS template engine</li>
-                </ul>
-                <li>MySQL/MongoDB</li>
-                <li>Docker</li>
-                <li>SVN/Git version control</li>
-                <li>NPM</li>
-                <li>Currently learning TypeScript</li>
-                <br>
-                <li>C/C++11 (12+ years)</li>
-              </ul>
-            </div>
-            <div class="contact">
-              <div class="title">Contact</div>
-              <form class="contact-form">
-                <input placeholder="Your name"></input>
-                <input placeholder="Your Email address"></input>
-                <input placeholder="Subject"></input>
-                <textarea placeholder="Your message"></textarea>
-                <button>Submit</button>
-              </form>
-            </div>
-          </section>
-        </div>
-
-        <div class="right">
-          <section class="portfolio">
-            <header class="portfolio-header"><h3>Latest Work</h3></header>
-            <div class="portfolio-examples">
-              <div class="portfolio-wrapper">
-                <img
-                  src="imgs/Hooks-Intro.png"
-                  alt="My hooks demostration site for my medium/linkdin article"
-                />
-                <ul>
-                  <li>
-                    <a href="https://github.com/Michael-Lafreniere/hooks-intro" class="btn-padding link__on-hover">
-                      <i class="fab fa-github faa-social animated-hover more-info-btn"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <i class="fas fa-plus more-info-btn" onclick="moreInfo(event)"></i>
-                  </li>
-                  <li class="portfolio-examples__item">
-                    <a href="#" class="btn-padding link__on-hover live-width">
-                      <span class="view-live">See Live&nbsp;&nbsp;<i class="fa fa-long-arrow-alt-right"></i></span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="more-info hidden">
-                <div class="project-summary">
-                  <span>A simple site I made for a blog post to demostrate modern React 16.8 and the use of hooks.</span>
-                </div>
-                <div class="overview">
-                  <span>This project uses NASA's open API to get the image of the day, stills from the Mar's Rover Curiosity 
-                    and from the Earth Polychromatic Imaging Camera (EPIC) to demostrate basic usage of useEffect, useReducer, 
-                    useState and useRef.</span>
-                </div>
-              </div>
-            </div>
-            <div class="portfolio-examples">
-              <div class="portfolio-wrapper">
-                <!-- TODO: myChatter future picture: -->
-                <img src="imgs/myChirper.png" />
-                <ul>
-                  <li>
-                    <a href="https://github.com/Michael-Lafreniere/chirper" class="btn-padding link__on-hover">
-                      <i class="fab fa-github faa-social animated-hover more-info-btn"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <i class="fas fa-plus more-info-btn" onclick="moreInfo(event)"></i>
-                  </li>
-                  <!-- Currently not live as it's still in early development: -->
-                  <!-- <li class="portfolio-examples__item">
-                    <a href="#" class="btn-padding link__on-hover live-width">
-                      <span class="view-live">See Live&nbsp;&nbsp;<i class="fa fa-long-arrow-alt-right"></i></span>
-                    </a>
-                  </li> -->
-                </ul>
-              </div>
-              <div class="more-info hidden">
-                <div class="project-summary">
-                  <span>A Twitter like clone, made from scratch that will be more backend focused than other projects I've 
-                    done to date</span>
-                </div>
-                <div class="overview">
-                  <span><p>Currently fleshing out the front end before focusing on backend services like multiple servers for 
-                    work distribution, analytics, admin interfaces, automation (image renaming & resizing), database parsing, 
-                    etc. We are currently able to create new users, log them in and out and post messages.</p>
-                    <p>Currently not available live as the database is local to my PC</p>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div class="portfolio-examples">
-              <div class="portfolio-wrapper">
-                <img src="imgs/The-Movie-Site.png" />
-                <ul>
-                  <li>
-                    <a href="https://github.com/Michael-Lafreniere/the-movie-site" class="btn-padding link__on-hover">
-                      <i class="fab fa-github faa-social animated-hover more-info-btn"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <i class="fas fa-plus more-info-btn" onclick="moreInfo(event)"></i>
-                  </li>
-                  <li class="portfolio-examples__item">
-                    <a href="#" class="btn-padding link__on-hover live-width">
-                      <span class="view-live">See Live&nbsp;&nbsp;<i class="fa fa-long-arrow-alt-right"></i></span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="more-info hidden">
-                <div class="project-summary">
-                  <span>The Movie Site - Inspired from a still image I seen of someone's front end design portfolio, I took 
-                    that a step further and made a fully interactive site</span>
-                </div>
-                <div class="overview">
-                  <span>
-                    <p>I decided to step up the complexity for this project.
-                    The original inspiration allowed you to search the
-                    <a href="https://www.themoviedb.org/documentation/api">The Movie Database (TMDb)</a>
-                    for details on a single movie.  I took that a bit further and load the 'Now Playing' movies by default, 
-                    displaying the first 16 listed.  You can also switch between 'Popular', 'Upcoming', 'Now Playing' and 
-                    'Top Rated'.
-                    </p>
-                    <p>You can also search, which supports auto complete, for a particular movie if you know it's name.  Or 
-                      clicking on any movie card from the earlier lists will being up more detailed information, along with 
-                      reviews, the trailer, and if available, the cast information for the movie.
-                    </p>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div class="portfolio-examples">
-              <div class="portfolio-wrapper"></div>
-                <img src="imgs/The-Weather-App.png" />
-                <ul>
-                  <li>
-                    <a href="https://github.com/Michael-Lafreniere/TheWeatherSite" class="btn-padding link__on-hover">
-                      <i class="fab fa-github faa-social animated-hover more-info-btn"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <i class="fas fa-plus more-info-btn" onclick="moreInfo(event)"></i>
-                  </li>
-                  <li class="portfolio-examples__item">
-                    <a href="#" class="btn-padding link__on-hover live-width">
-                      <span class="view-live">See Live&nbsp;&nbsp;<i class="fa fa-long-arrow-alt-right"></i></span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="more-info hidden">
-                <div class="project-summary">
-                  <span>My first major project using a 3rd party API</span>
-                </div>
-                <div class="overview">
-                  <span>A simple NodeJS project using EJS template engine that renders today's current weather with more 
-                    details.  Then a 7 day forecast with popup cards, when you hover on a card, it pushes it's neighbors away 
-                    and raises the one you're hovering over up for easier visibility.  It also sports a light and dark theme 
-                    and a toggle to show how alerts would look.  It also uses 
-                    <a href="https://darkskyapp.github.io/skycons/">Skycons</a> for animated weather icons.  All the local 
-                    weather data is aquired using the <a href="https://darksky.net/dev">DarkSky.</a> API</span>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
-    </main>
-
-    <footer>
-      <span>&copy2020 by Michael Lafreniere - Made with care and ☕ -- </span>
-      <a class="footer__github btn-padding link__on-hover" href="https://github.com/Michael-Lafreniere/Portfolio"><i class="fab fa-github faa-social animated-hover"></i></a>
-    </footer>
   </body>
-  <script src="portfolio.js"></script>
 </html>
